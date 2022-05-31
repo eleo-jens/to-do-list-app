@@ -1,0 +1,138 @@
+/* rassemble le contenu */
+/* Color palette used: https://coolors.co/palette/042a2b-5eb1bf-cdedf6-ef7b45-d84727 */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ef7b45;
+    /* new */
+    width: 100%;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_section {
+    background-color: white;
+    /* 
+    background: transparent;
+    max-width: 500px;
+    width: 90%;
+    height: 500px; */
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 10px;
+    /* new */
+    padding: 25px 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+
+.main_section .title {
+    text-align: center;
+    color: black;
+}
+
+.add_section {
+    width: 100%;
+    background-color: #cdedf6;
+    margin: 0px auto;
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+
+/* changement pour que le boutton soit a droite de l'input */
+.main_section .add_section {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.add_section input {
+    /* display: flex; */
+    justify-content: space-around;
+    align-items: center;
+    width: calc(95% - 30px);
+    height: 40px;
+    margin: 10px auto;
+    border: 2px solid #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
+
+.add_section button.btn {
+    width: 40px;
+    height: 40px;
+    margin: 0px auto;
+    border: none;
+    outline: none;
+    background: #042a2b;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add_section button.btn:hover {
+    box-shadow: 0 2px 2px 0 #ccc, 0 2px 3px 0 #ccc;
+    opacity: 0.7;
+}
+
+.tasks_section {
+    width: 100%;
+    background-color: #cdedf6;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.task {
+    width:95%;
+    margin: 10px auto;
+    padding:20px 10px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    box-shadow: 0 4px 8px 0 #ccc;
+}
+
+.task h2{
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.task small {
+    display: block;
+    width: 100%;
+    padding: 5px 0px;
+    padding-left: 27px;
+    font-size: 12px;
+}
+
+.remove-to-do {
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    text-align: right;
+    padding: 0px 5px 8px 0px;
+    border-radius: 50%;
+    transition: background 1s;
+    cursor: pointer;
+}
+
+h2.checked {
+    color: #999 !important;
+    text-decoration: line-through;
+}
